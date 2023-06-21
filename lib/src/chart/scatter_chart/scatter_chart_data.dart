@@ -188,6 +188,7 @@ class ScatterSpot extends FlSpot with EquatableMixin {
     bool? show,
     double? radius,
     Color? color,
+    required this.label,
   })  : show = show ?? true,
         radius = radius ?? 6,
         color = color ??
@@ -202,6 +203,9 @@ class ScatterSpot extends FlSpot with EquatableMixin {
   /// Determines color of the spot.
   Color color;
 
+  // Label
+  String label;
+
   @override
   ScatterSpot copyWith({
     double? x,
@@ -209,6 +213,7 @@ class ScatterSpot extends FlSpot with EquatableMixin {
     bool? show,
     double? radius,
     Color? color,
+    String? label,
   }) {
     return ScatterSpot(
       x ?? this.x,
@@ -216,6 +221,7 @@ class ScatterSpot extends FlSpot with EquatableMixin {
       show: show ?? this.show,
       radius: radius ?? this.radius,
       color: color ?? this.color,
+      label: label ?? this.label,
     );
   }
 
@@ -227,6 +233,7 @@ class ScatterSpot extends FlSpot with EquatableMixin {
       show: b.show,
       radius: lerpDouble(a.radius, b.radius, t),
       color: Color.lerp(a.color, b.color, t),
+      label: b.label,
     );
   }
 
@@ -238,6 +245,7 @@ class ScatterSpot extends FlSpot with EquatableMixin {
         show,
         radius,
         color,
+        label,
       ];
 }
 

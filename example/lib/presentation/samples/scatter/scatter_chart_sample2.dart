@@ -29,6 +29,7 @@ class _ScatterChartSample2State extends State {
               color: selectedSpots.contains(0)
                   ? AppColors.contentColorGreen
                   : AppColors.contentColorWhite.withOpacity(0.5),
+              label: "",
             ),
             ScatterSpot(
               2,
@@ -37,6 +38,7 @@ class _ScatterChartSample2State extends State {
                   ? AppColors.contentColorYellow
                   : AppColors.contentColorWhite.withOpacity(0.5),
               radius: 12,
+              label: "",
             ),
             ScatterSpot(
               4,
@@ -45,6 +47,7 @@ class _ScatterChartSample2State extends State {
                   ? AppColors.contentColorPink
                   : AppColors.contentColorWhite.withOpacity(0.5),
               radius: 8,
+              label: "",
             ),
             ScatterSpot(
               8,
@@ -53,6 +56,7 @@ class _ScatterChartSample2State extends State {
                   ? AppColors.contentColorOrange
                   : AppColors.contentColorWhite.withOpacity(0.5),
               radius: 20,
+              label: "",
             ),
             ScatterSpot(
               5,
@@ -61,6 +65,7 @@ class _ScatterChartSample2State extends State {
                   ? AppColors.contentColorPurple
                   : AppColors.contentColorWhite.withOpacity(0.5),
               radius: 14,
+              label: "",
             ),
             ScatterSpot(
               7,
@@ -69,6 +74,7 @@ class _ScatterChartSample2State extends State {
                   ? AppColors.contentColorBlue
                   : AppColors.contentColorWhite.withOpacity(0.5),
               radius: 18,
+              label: "",
             ),
             ScatterSpot(
               3,
@@ -77,6 +83,7 @@ class _ScatterChartSample2State extends State {
                   ? AppColors.contentColorRed
                   : AppColors.contentColorWhite.withOpacity(0.5),
               radius: 36,
+              label: "",
             ),
             ScatterSpot(
               2,
@@ -85,6 +92,7 @@ class _ScatterChartSample2State extends State {
                   ? AppColors.contentColorCyan
                   : AppColors.contentColorWhite.withOpacity(0.5),
               radius: 22,
+              label: "",
             ),
           ],
           minX: 0,

@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:fl_chart/fl_chart.dart';
 import 'package:fl_chart/src/chart/bar_chart/bar_chart_painter.dart';
 import 'package:fl_chart/src/chart/base/axis_chart/axis_chart_helper.dart';
@@ -135,15 +137,48 @@ abstract class AxisChartPainter<D extends AxisChartData>
   @visibleForTesting
   void drawBackground(CanvasWrapper canvasWrapper, PaintHolder<D> holder) {
     final data = holder.data;
-    if (data.backgroundColor.opacity == 0.0) {
-      return;
-    }
 
     final viewSize = canvasWrapper.size;
-    _backgroundPaint.color = data.backgroundColor;
-    canvasWrapper.drawRect(
-      Rect.fromLTWH(0, 0, viewSize.width, viewSize.height),
-      _backgroundPaint,
+    data.backgroundColor = Color(0xff009A44);
+
+    if (data.backgroundColor.opacity != 0.0) {
+      _backgroundPaint.color = data.backgroundColor;
+      canvasWrapper.drawRect(
+        Rect.fromLTWH(0, 0, viewSize.width, viewSize.height),
+        _backgroundPaint,
+      );
+    }
+
+    Paint _amberPaint = Paint()..style = PaintingStyle.fill;
+    _amberPaint.color = Color(0xffed8b00);
+
+    canvasWrapper.drawArc(
+      Rect.fromLTWH(
+        viewSize.width * 1.0 / 3.0,
+        viewSize.height * -2.0 / 3.0,
+        viewSize.width * 4.0 / 3.0,
+        viewSize.height * 4.0 / 3.0,
+      ),
+      pi / 2,
+      pi / 2,
+      true,
+      _amberPaint,
+    );
+
+    Paint _redPaint = Paint()..style = PaintingStyle.fill;
+    _redPaint.color = Color(0xffDA291C);
+
+    canvasWrapper.drawArc(
+      Rect.fromLTWH(
+        viewSize.width * 2.0 / 3.0,
+        viewSize.height * -1.0 / 3.0,
+        viewSize.width * 2.0 / 3.0,
+        viewSize.height * 2.0 / 3.0,
+      ),
+      pi / 2,
+      pi / 2,
+      true,
+      _redPaint,
     );
   }
 
