@@ -47,6 +47,7 @@ void main() {
                   show: false,
                   radius: 33,
                   color: Colors.yellow,
+                  label: '',
                 ),
                 ScatterSpot(
                   2,
@@ -54,8 +55,16 @@ void main() {
                   show: false,
                   radius: 11,
                   color: Colors.purple,
+                  label: '',
                 ),
-                ScatterSpot(1, 2, show: false, radius: 11, color: Colors.white),
+                ScatterSpot(
+                  1,
+                  2,
+                  show: false,
+                  radius: 11,
+                  color: Colors.white,
+                  label: '',
+                ),
               ],
             ),
         true,
@@ -70,6 +79,7 @@ void main() {
                   show: false,
                   radius: 11,
                   color: Colors.purple,
+                  label: '',
                 ),
                 ScatterSpot(
                   0,
@@ -77,8 +87,16 @@ void main() {
                   show: false,
                   radius: 33,
                   color: Colors.yellow,
+                  label: '',
                 ),
-                ScatterSpot(1, 2, show: false, radius: 11, color: Colors.white),
+                ScatterSpot(
+                  1,
+                  2,
+                  show: false,
+                  radius: 11,
+                  color: Colors.white,
+                  label: '',
+                ),
               ],
             ),
         false,
@@ -350,8 +368,16 @@ void main() {
     });
 
     test('ScatterSpot equality test', () {
-      final scatterSpot = ScatterSpot(0, 1);
-      final scatterSpotClone = ScatterSpot(0, 1);
+      final scatterSpot = ScatterSpot(
+        0,
+        1,
+        label: '',
+      );
+      final scatterSpotClone = ScatterSpot(
+        0,
+        1,
+        label: '',
+      );
 
       expect(scatterSpot == scatterSpotClone.copyWith(), true);
       expect(scatterSpot == scatterSpotClone.copyWith(y: 3), false);

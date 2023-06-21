@@ -275,11 +275,11 @@ class MockData {
     radius: 4,
   );
 
-  static final scatterSpot0 = ScatterSpot(0, 0, color: color0);
-  static final scatterSpot1 = ScatterSpot(1, 1, color: color1);
-  static final scatterSpot2 = ScatterSpot(2, 2, color: color2);
-  static final scatterSpot3 = ScatterSpot(3, 3, color: color3);
-  static final scatterSpot4 = ScatterSpot(4, 4, color: color4);
+  static final scatterSpot0 = ScatterSpot(0, 0, color: color0, label: '');
+  static final scatterSpot1 = ScatterSpot(1, 1, color: color1, label: '');
+  static final scatterSpot2 = ScatterSpot(2, 2, color: color2, label: '');
+  static final scatterSpot3 = ScatterSpot(3, 3, color: color3, label: '');
+  static final scatterSpot4 = ScatterSpot(4, 4, color: color4, label: '');
 
   static final scatterTouchedSpot = ScatterTouchedSpot(scatterSpot1, 0);
 
@@ -2215,12 +2215,12 @@ ScatterTooltipItem? scatterChartGetTooltipItems(ScatterSpot spots) {
   );
 }
 
-final ScatterSpot scatterSpot1 = ScatterSpot(1, 40);
-final ScatterSpot scatterSpot1Clone = ScatterSpot(1, 40);
-final ScatterSpot scatterSpot2 = ScatterSpot(-4, -8);
+final ScatterSpot scatterSpot1 = ScatterSpot(1, 40, label: '');
+final ScatterSpot scatterSpot1Clone = ScatterSpot(1, 40, label: '');
+final ScatterSpot scatterSpot2 = ScatterSpot(-4, -8, label: '');
 final ScatterSpot scatterSpot2Clone = scatterSpot2.copyWith();
-final ScatterSpot scatterSpot3 = ScatterSpot(-14, 5);
-final ScatterSpot scatterSpot4 = ScatterSpot(-0, 0);
+final ScatterSpot scatterSpot3 = ScatterSpot(-14, 5, label: '');
+final ScatterSpot scatterSpot4 = ScatterSpot(-0, 0, label: '');
 
 String getLabel(int spotIndex, ScatterSpot spot) => 'label';
 
@@ -2251,9 +2251,9 @@ final ScatterChartData scatterChartData1 = ScatterChartData(
     ),
   ),
   scatterSpots: [
-    ScatterSpot(0, 0, show: false, radius: 33, color: Colors.yellow),
-    ScatterSpot(2, 2, show: false, radius: 11, color: Colors.purple),
-    ScatterSpot(1, 2, show: false, radius: 11, color: Colors.white),
+    ScatterSpot(0, 0, show: false, radius: 33, color: Colors.yellow, label: ''),
+    ScatterSpot(2, 2, show: false, radius: 11, color: Colors.purple, label: ''),
+    ScatterSpot(1, 2, show: false, radius: 11, color: Colors.white, label: ''),
   ],
   scatterTouchData: ScatterTouchData(
     enabled: true,

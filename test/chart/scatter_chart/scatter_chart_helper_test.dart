@@ -47,8 +47,16 @@ void main() {
 
     test('Test validity 2', () {
       final scatterSpots = [
-        ScatterSpot(3, -1),
-        ScatterSpot(-1, 3),
+        ScatterSpot(
+          3,
+          -1,
+          label: '',
+        ),
+        ScatterSpot(
+          -1,
+          3,
+          label: '',
+        ),
       ];
       final result = ScatterChartHelper.calculateMaxAxisValues(scatterSpots);
       expect(result.minX, -1);

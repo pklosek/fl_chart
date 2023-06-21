@@ -21,9 +21,9 @@ void main() {
       const viewSize = Size(400, 400);
       final data = ScatterChartData(
         scatterSpots: [
-          ScatterSpot(0, 1),
-          ScatterSpot(1, 3),
-          ScatterSpot(3, 4),
+          ScatterSpot(0, 1, label: ''),
+          ScatterSpot(1, 3, label: ''),
+          ScatterSpot(3, 4, label: ''),
         ],
       );
 
@@ -73,10 +73,10 @@ void main() {
         minX: 0,
         maxX: 10,
         scatterSpots: [
-          ScatterSpot(1, 1, radius: 18),
-          ScatterSpot(3, 9, show: false),
-          ScatterSpot(8, 2, radius: 4),
-          ScatterSpot(7, 5, radius: 6),
+          ScatterSpot(1, 1, radius: 18, label: ''),
+          ScatterSpot(3, 9, show: false, label: ''),
+          ScatterSpot(8, 2, radius: 4, label: ''),
+          ScatterSpot(7, 5, radius: 6, label: ''),
         ],
         titlesData: const FlTitlesData(show: false),
         clipData: const FlClipData.all(),
@@ -115,10 +115,10 @@ void main() {
         minX: 0,
         maxX: 10,
         scatterSpots: [
-          ScatterSpot(1, 1, show: false),
-          ScatterSpot(3, 9, show: false),
-          ScatterSpot(8, 2, show: false),
-          ScatterSpot(7, 5, show: false),
+          ScatterSpot(1, 1, show: false, label: ''),
+          ScatterSpot(3, 9, show: false, label: ''),
+          ScatterSpot(8, 2, show: false, label: ''),
+          ScatterSpot(7, 5, show: false, label: ''),
         ],
         titlesData: const FlTitlesData(show: false),
         clipData: const FlClipData.none(),
@@ -152,12 +152,12 @@ void main() {
         minX: 0,
         maxX: 10,
         scatterSpots: [
-          ScatterSpot(1, 1, radius: 18),
-          ScatterSpot(2, 2, radius: 8),
-          ScatterSpot(3, 9, show: false),
-          ScatterSpot(8, 8, radius: 4),
-          ScatterSpot(7, 5, radius: 20),
-          ScatterSpot(4, 6, radius: 24),
+          ScatterSpot(1, 1, radius: 18, label: ''),
+          ScatterSpot(2, 2, radius: 8, label: ''),
+          ScatterSpot(3, 9, show: false, label: ''),
+          ScatterSpot(8, 8, radius: 4, label: ''),
+          ScatterSpot(7, 5, radius: 20, label: ''),
+          ScatterSpot(4, 6, radius: 24, label: ''),
         ],
         titlesData: const FlTitlesData(show: false),
         clipData: const FlClipData.all(),
@@ -221,10 +221,10 @@ void main() {
         minX: 0,
         maxX: 10,
         scatterSpots: [
-          ScatterSpot(1, 1, radius: 18),
-          ScatterSpot(3, 9, show: false),
-          ScatterSpot(8, 2, radius: 4),
-          ScatterSpot(7, 5, radius: 6),
+          ScatterSpot(1, 1, radius: 18, label: ''),
+          ScatterSpot(3, 9, show: false, label: ''),
+          ScatterSpot(8, 2, radius: 4, label: ''),
+          ScatterSpot(7, 5, radius: 6, label: ''),
         ],
         showingTooltipIndicators: [0, 2, 3],
         titlesData: const FlTitlesData(show: false),
@@ -267,10 +267,10 @@ void main() {
         minX: 0,
         maxX: 10,
         scatterSpots: [
-          ScatterSpot(1, 1, radius: 18),
-          ScatterSpot(3, 9, show: false),
-          ScatterSpot(8, 2, radius: 4),
-          ScatterSpot(7, 5, radius: 6),
+          ScatterSpot(1, 1, radius: 18, label: ''),
+          ScatterSpot(3, 9, show: false, label: ''),
+          ScatterSpot(8, 2, radius: 4, label: ''),
+          ScatterSpot(7, 5, radius: 6, label: ''),
         ],
         showingTooltipIndicators: [0, 2, 3],
         scatterTouchData: ScatterTouchData(
@@ -313,7 +313,7 @@ void main() {
     test('test 1', () {
       const viewSize = Size(100, 100);
 
-      final spot1 = ScatterSpot(1, 1);
+      final spot1 = ScatterSpot(1, 1, label: '');
       final data = ScatterChartData(
         minY: 0,
         maxY: 10,
@@ -411,7 +411,7 @@ void main() {
     test('test 2', () {
       const viewSize = Size(100, 100);
 
-      final spot1 = ScatterSpot(1, 1);
+      final spot1 = ScatterSpot(1, 1, label: '');
       final data = ScatterChartData(
         minY: 0,
         maxY: 10,
@@ -514,7 +514,7 @@ void main() {
     test('test 3', () {
       const viewSize = Size(100, 100);
 
-      final spot1 = ScatterSpot(1, 1);
+      final spot1 = ScatterSpot(1, 1, label: '');
       final data = ScatterChartData(
         minY: 0,
         maxY: 10,
@@ -619,10 +619,10 @@ void main() {
     test('test 1', () {
       const viewSize = Size(100, 100);
       final spots = [
-        ScatterSpot(1, 1),
-        ScatterSpot(2, 4),
-        ScatterSpot(5, 2, radius: 0.5),
-        ScatterSpot(8, 7),
+        ScatterSpot(1, 1, label: ''),
+        ScatterSpot(2, 4, label: ''),
+        ScatterSpot(5, 2, radius: 0.5, label: ''),
+        ScatterSpot(8, 7, label: ''),
       ];
 
       final data = ScatterChartData(
@@ -689,10 +689,10 @@ void main() {
     test('test 2', () {
       const viewSize = Size(100, 100);
       final spots = [
-        ScatterSpot(1, 1),
-        ScatterSpot(2, 4),
-        ScatterSpot(5, 2, radius: 0.5),
-        ScatterSpot(8, 7),
+        ScatterSpot(1, 1, label: ''),
+        ScatterSpot(2, 4, label: ''),
+        ScatterSpot(5, 2, radius: 0.5, label: ''),
+        ScatterSpot(8, 7, label: ''),
       ];
 
       final data = ScatterChartData(
